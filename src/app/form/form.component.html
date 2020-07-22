@@ -19,5 +19,60 @@
 </div>
 
 <div class="form-group">
+
+    <span>Statut :</span>
+    <br>
+    <label>
+        Présent
+        <input 
+            type="radio"
+            name="statut"
+            value="p"
+            [formControl]="informationsControl">
+    </label>
+    <br>
+    <label>
+        Absent
+        <input 
+            type="radio"
+            name="statut"
+            value="a"
+            [formControl]="informationsControl">
+    </label>
+    <br>
+    <label>
+        Peut-être
+        <input 
+            type="radio"
+            name="statut"
+            value="pt"
+            [formControl]="informationsControl">
+    </label>
+</div>
+
+<div class="form-group">
+
+    <span>Sexe :</span>
+    <br>
+    <label>
+        M
+        <input 
+            type="radio"
+            name="sexe"
+            value="m"
+            [formControl]="informationsControl">
+    </label>
+    <br>
+    <label>
+        F
+        <input 
+            type="radio"
+            name="sexe"
+            value="f"
+            [formControl]="informationsControl">
+    </label>
+</div>
+
+<div class="form-group">
     <button (click)="sendInformations()">Save</button>
 </div>
