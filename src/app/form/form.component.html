@@ -1,0 +1,23 @@
+<div class="form-group">
+    <label>
+        Prénom :
+        <input 
+            type="text" 
+            name="prenom" 
+            [formControl]="informationsControl">
+    </label>
+</div>
+
+<div class="form-group">
+    <label>
+        Nom :
+        <input 
+            type="text" 
+            name="nom" 
+            [formControl]="informationsControl">
+    </label>
+</div>
+
+<div class="form-group">
+    <button (click)="sendInformations()">Save</button>
+</div>

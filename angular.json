@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "powerside"
+    }
+  },
+  "defaultProject": "powerside",
+  "cli": {
+    "analytics": "ceac1475-16f0-4280-ab7a-14756bc7f9f5"
+  }
 }
