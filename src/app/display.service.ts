@@ -21,18 +21,24 @@ export class DisplayService {
   }
 
   initChangeLabel() {
+    // labels à être affichés
     const labels = [
       "Grande Ventes D'entrepôt",
       "Ce Samedi",
       "Ne ratez pas votre chance"
     ]
-    let counter = 0;
+    let counter = 1;
+
+    // Change le label à chaque x secondes
     setInterval( () => {
       this.labelSource.next(labels[counter]);
       counter++;
       if (counter >= labels.length) {
         counter = 0;
       }
-    }, 10000)
+    }, 10000);
+
+    // Défini le texte de départ
+    this.labelSource.next(labels[0]);
   }
 }
