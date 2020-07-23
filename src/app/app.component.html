@@ -9,6 +9,15 @@
 
     <div class="card">
       <span>Bienvenue au magasin</span>
+
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="data-row" *ngFor="let element of message | keyvalue">
+          <p><strong>{{element.key}}</strong> : {{element.value}}</p>
+        </div>
+      </div>
     </div>
 
   </div>

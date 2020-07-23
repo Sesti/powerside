@@ -1,78 +1,82 @@
-<div class="form-group">
-    <label>
-        Prénom :
-        <input 
-            type="text" 
-            name="prenom" 
-            [formControl]="informationsControl">
-    </label>
-</div>
+<form id="formMagasin" [formGroup]="formMagasin">
 
-<div class="form-group">
-    <label>
-        Nom :
-        <input 
-            type="text" 
-            name="nom" 
-            [formControl]="informationsControl">
-    </label>
-</div>
+    <div class="form-group">
+        <label>
+            Nom :
+            <input 
+                type="text" 
+                formControlName="nom" 
+                [formControl]="informationsControl">
+        </label>
+    </div>
 
-<div class="form-group">
+    <div class="form-group">
+        <label>
+            Prénom :
+            <input 
+                type="text" 
+                formControlName="prenom" 
+                [formControl]="informationsControl">
+        </label>
+    </div>
 
-    <span>Statut :</span>
-    <br>
-    <label>
-        Présent
-        <input 
-            type="radio"
-            name="statut"
-            value="p"
-            [formControl]="informationsControl">
-    </label>
-    <br>
-    <label>
-        Absent
-        <input 
-            type="radio"
-            name="statut"
-            value="a"
-            [formControl]="informationsControl">
-    </label>
-    <br>
-    <label>
-        Peut-être
-        <input 
-            type="radio"
-            name="statut"
-            value="pt"
-            [formControl]="informationsControl">
-    </label>
-</div>
+    <div class="form-group">
 
-<div class="form-group">
+        <span>Statut :</span>
+        <br>
+        <label>
+            Présent
+            <input 
+                type="radio"
+                formControlName="statut"
+                value="Présent"
+                [formControl]="informationsControl">
+        </label>
+        <br>
+        <label>
+            Absent
+            <input 
+                type="radio"
+                formControlName="statut"
+                value="Absent"
+                [formControl]="informationsControl">
+        </label>
+        <br>
+        <label>
+            Peut-être
+            <input 
+                type="radio"
+                formControlName="statut"
+                value="Peut-être"
+                [formControl]="informationsControl">
+        </label>
+    </div>
 
-    <span>Sexe :</span>
-    <br>
-    <label>
-        M
-        <input 
-            type="radio"
-            name="sexe"
-            value="m"
-            [formControl]="informationsControl">
-    </label>
-    <br>
-    <label>
-        F
-        <input 
-            type="radio"
-            name="sexe"
-            value="f"
-            [formControl]="informationsControl">
-    </label>
-</div>
+    <div class="form-group">
 
-<div class="form-group">
-    <button (click)="sendInformations()">Save</button>
-</div>
+        <span>Sexe :</span>
+        <br>
+        <label>
+            M
+            <input 
+                type="radio"
+                formControlName="sexe"
+                value="Masculin"
+                [formControl]="informationsControl">
+        </label>
+        <br>
+        <label>
+            F
+            <input 
+                type="radio"
+                formControlName="sexe"
+                value="Féminin"
+                [formControl]="informationsControl">
+        </label>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" *ngIf="isSubmitDisplayed"  (click)="sendInformations()">Save</button>
+
+    </div>
+<form>
