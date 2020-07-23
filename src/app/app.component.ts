@@ -10,6 +10,7 @@ export class AppComponent {
 
   title = 'powerside';
   message:object;
+  label:string;
 
   constructor(private data: DisplayService) { }
 
@@ -23,6 +24,10 @@ export class AppComponent {
             entries[element[0]] = element[1];
         });
         this.message = entries;
+    });
+
+    this.data.currentLabel.subscribe(label => {
+      this.label = label;
     })
   }
 }
